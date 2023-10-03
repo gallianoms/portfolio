@@ -17,7 +17,7 @@ export default function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const menuItems = [
-    '01. About',
+    '01. Social Media',
     '02. Experience',
     '03. Techs',
     '04. Work',
