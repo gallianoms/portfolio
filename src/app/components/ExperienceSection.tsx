@@ -10,13 +10,11 @@ type ExperienceSectionProps = {
 
 const ExperienceSection = ({ num, title }: ExperienceSectionProps) => {
   const [visibleOption, setVisibleOption] = useState<number>(1)
+  const [selectedKeys, setSelectedKeys] = React.useState(['mexican_grill'])
 
   const toggleOption = (option: number) => {
     setVisibleOption(option)
   }
-
-  //
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set(['text']))
 
   return (
     <section className='flex flex-col items-center justify-center mt-14 mx-6 '>

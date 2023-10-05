@@ -1,5 +1,6 @@
-import { Avatar } from '@nextui-org/react'
+import { Avatar, Link } from '@nextui-org/react'
 import React from 'react'
+import { ArrowLongRight } from '../icons/ArrowLongRight'
 
 const HeroSection = () => {
   return (
@@ -26,6 +27,18 @@ const HeroSection = () => {
       <p className='text-base lg:text-lg mt-2 hover:underline underline-offset-4 decoration-1'>
         <a href='mailto:ggallianoms@gmail.com'>ggallianoms@gmail.com</a>
       </p>
+      <Link
+        isExternal
+        href='#'
+        className='mt-3 text-base font-medium decoration-1 underline-offset-4 transition-transform transform hover:translate-x-2'
+        underline='hover'
+        color='warning'
+      >
+        View Full Résumé
+        <span className='ml-2 '>
+          <ArrowLongRight />
+        </span>
+      </Link>
     </section>
   )
 }

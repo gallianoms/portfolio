@@ -44,36 +44,6 @@ const AboutSection = ({ num, title }: AboutSectionProps) => {
             </svg>
             HTML, CSS, JS
           </li>
-          <li className='flex font-mono'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 20 20'
-              fill='currentColor'
-              className='w-5 h-5 text-amber-500'
-            >
-              <path
-                fillRule='evenodd'
-                d='M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z'
-                clipRule='evenodd'
-              />
-            </svg>
-            C# and .NET
-          </li>
-          <li className='flex font-mono mb-1'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 20 20'
-              fill='currentColor'
-              className='w-5 h-5 text-amber-500'
-            >
-              <path
-                fillRule='evenodd'
-                d='M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z'
-                clipRule='evenodd'
-              />
-            </svg>
-            React, Redux
-          </li>
 
           <li className='flex font-mono mb-1'>
             <svg
@@ -103,8 +73,39 @@ const AboutSection = ({ num, title }: AboutSectionProps) => {
                 clipRule='evenodd'
               />
             </svg>
-            SQL, MongoDB
+            React, Next, TS
           </li>
+          <li className='flex font-mono mb-1'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 20 20'
+              fill='currentColor'
+              className='w-5 h-5 text-amber-500'
+            >
+              <path
+                fillRule='evenodd'
+                d='M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z'
+                clipRule='evenodd'
+              />
+            </svg>
+            Teamwork
+          </li>
+          <li className='flex font-mono'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 20 20'
+              fill='currentColor'
+              className='w-5 h-5 text-amber-500'
+            >
+              <path
+                fillRule='evenodd'
+                d='M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z'
+                clipRule='evenodd'
+              />
+            </svg>
+            Node, Express
+          </li>
+
           <li className='flex font-mono mb-1'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -133,8 +134,9 @@ const AboutSection = ({ num, title }: AboutSectionProps) => {
                 clipRule='evenodd'
               />
             </svg>
-            Teamwork
+            SQL, MongoDB
           </li>
+
           <li className='flex font-mono mb-1'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
