@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { SVGProps } from 'react'
 
-export const MoonIcon = props => (
+interface MoonIconProps extends SVGProps<SVGSVGElement> {}
+
+export const MoonIcon: React.FC<MoonIconProps> = props => (
   <svg
     aria-hidden='true'
     focusable='false'

@@ -34,26 +34,22 @@ const SocialMediaSection = () => {
   ]
 
   return (
-    <div>
-      <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 mx-6 lg:mx-0 mt-10 lg:mt-0 '>
-        {socialMediaData.map((socialMedia, idx) => (
-          <div className='w-44 h-44 p-4 border rounded-3xl shadow-sm' key={idx}>
-            <Avatar radius='sm' src={socialMedia.avatarSrc} className='' />
-            <p className='text-sm mt-3'>{socialMedia.username}</p>
-            <p className='text-xs mt-1 text-slate-500'>
-              {socialMedia.platform}
-            </p>
-            <Button
-              className='font-semibold w-20 mt-5 rounded bg-gray-100 hover:bg-gray-200 border dark:text-gray-900 dark:hover:bg-gray-300 shadow-sm'
-              size='sm'
-              onClick={() => window.open(socialMedia.website)}
-            >
-              {socialMedia.buttonText}
-            </Button>
-          </div>
-        ))}
-      </div>
-    </div>
+    <section className='grid grid-cols-2 lg:grid-cols-4 gap-4 mx-4 lg:mx-0 mt-10 lg:mt-0 '>
+      {socialMediaData.map((socialMedia, idx) => (
+        <div className='w-44 h-44 p-4 border rounded-3xl shadow-sm' key={idx}>
+          <Avatar radius='sm' src={socialMedia.avatarSrc} className='' />
+          <p className='text-sm mt-3'>{socialMedia.username}</p>
+          <p className='text-xs mt-1 text-slate-500'>{socialMedia.platform}</p>
+          <Button
+            className='font-semibold w-20 mt-5 rounded bg-gray-100 hover:bg-gray-200 border dark:text-gray-900 dark:hover:bg-gray-300 shadow-sm'
+            size='sm'
+            onClick={() => window.open(socialMedia.website)}
+          >
+            {socialMedia.buttonText}
+          </Button>
+        </div>
+      ))}
+    </section>
   )
 }
 

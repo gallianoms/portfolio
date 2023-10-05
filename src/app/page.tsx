@@ -1,5 +1,7 @@
 'use client'
 
+import AboutSection from './components/AboutSection'
+import ExperienceSection from './components/ExperienceSection'
 import HeroSection from './components/HeroSection'
 import MainNav from './components/MainNav'
 import SocialMediaSection from './components/SocialMediaSection'
@@ -19,6 +21,8 @@ export default function Home() {
           <div className='hidden lg:block'>
             <SocialMediaSection />
           </div>
+          <AboutSection num='01' title='About Me' />
+          <ExperienceSection num='02' title='Work Experience' />
         </div>
       </div>
     </main>

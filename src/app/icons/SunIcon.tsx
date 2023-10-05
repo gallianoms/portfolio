@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { SVGProps } from 'react'
 
-export const SunIcon = props => (
+interface SunIconProps extends SVGProps<SVGSVGElement> {}
+
+export const SunIcon: React.FC<SunIconProps> = props => (
   <svg
     aria-hidden='true'
     focusable='false'

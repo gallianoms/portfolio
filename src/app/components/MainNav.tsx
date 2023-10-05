@@ -80,7 +80,7 @@ export default function MainNav() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link color='foreground' className='w-full' href='#' size='sm'>
+            <Link color='foreground' className='w-full' href='#' size='md'>
               {item}
             </Link>
           </NavbarMenuItem>

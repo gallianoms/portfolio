@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className=''>
+    <section>
       <Avatar
         src='/avatar.png'
         className='w-28 h-28 lg:w-44 lg:h-44 '
@@ -26,7 +26,7 @@ const HeroSection = () => {
       <p className='text-base lg:text-lg mt-2 hover:underline underline-offset-4 decoration-1'>
         <a href='mailto:ggallianoms@gmail.com'>ggallianoms@gmail.com</a>
       </p>
-    </div>
+    </section>
   )
 }
 
