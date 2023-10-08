@@ -70,7 +70,7 @@ export default function MainNav() {
             href='#'
             variant='bordered'
             radius='sm'
-            className='bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg'
+            className='bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg font-medium'
           >
             Resume
           </Button>

@@ -4,6 +4,7 @@ import AboutSection from './components/AboutSection'
 import ExperienceSection from './components/ExperienceSection'
 import HeroSection from './components/HeroSection'
 import MainNav from './components/MainNav'
+import ProjectSection from './components/ProjectSection'
 import SocialMediaSection from './components/SocialMediaSection'
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
           </div>
           <AboutSection num='01' title='About Me' />
           <ExperienceSection num='02' title='Work Experience' />
+          <ProjectSection num='03' title="Some Projects I've Built" />
         </div>
       </div>
     </main>

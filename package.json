@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.13",
+    "embla-carousel-react": "^8.0.0-rc14",
     "framer-motion": "^10.16.4",
     "next": "latest",
     "next-themes": "^0.2.1",
