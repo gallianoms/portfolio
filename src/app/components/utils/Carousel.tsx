@@ -76,7 +76,10 @@ const Carousel = ({ carouselData }: CarouselProps) => {
               isIconOnly
               className=' rounded-full bg-[#BEBAB4] text-white'
             >
-              <Avatar src='/github2.png' className='w-full h-full bg-gray-50' />
+              <Avatar
+                src='./github2.png'
+                className='w-full h-full bg-gray-50'
+              />
             </Button>
           </Tooltip>
           <ModalRequirementsProject requirements={requirements} techs={techs} />

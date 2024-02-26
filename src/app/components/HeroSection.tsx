@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section>
       <Avatar
-        src='/avatar.png'
+        src='./avatar.png'
         className='w-28 h-28 lg:w-44 lg:h-44 '
         isBordered
       />
@@ -31,7 +31,7 @@ const HeroSection = () => {
       </p>
       <Link
         isExternal
-        href='/SalvadorFrontend.pdf'
+        href='/SalvadorJesusCV.pdf'
         className='mt-3 text-base font-medium decoration-1 underline-offset-4 transition-transform transform hover:translate-x-2'
         underline='hover'
         color='warning'
