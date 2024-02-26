@@ -102,7 +102,7 @@ export default function MainNav() {
         <NavbarItem>
           <Button
             as={Link}
-            href='/SalvadorFrontend.pdf'
+            href='/SalvadorJesusCV.pdf'
             isExternal
             variant='bordered'
             radius='sm'
