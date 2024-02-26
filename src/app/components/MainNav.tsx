@@ -13,16 +13,17 @@ import {
 } from '@nextui-org/react'
 import ThemeSwitch from './ThemeSwitch'
 
+import { Link as ScrollLink } from 'react-scroll'
+
 export default function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const menuItems = [
-    '01. Social Media',
+    '01. About me',
     '02. Experience',
-    '03. Techs',
-    '04. Work',
-    '05. Contact',
-    '06. Resume',
+    '03. Projects',
+    '04. Studies',
+    '05. Languages',
   ]
 
   return (
@@ -34,40 +35,75 @@ export default function MainNav() {
         />
         <NavbarBrand>
           <ThemeSwitch />
-          <p className='font-bold text-inherit pl-3'>HI THERE..</p>
+          <p className='font-bold text-inherit pl-3'>Hello there..</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex gap-4 ' justify='center'>
         <NavbarItem>
-          <Link color='foreground' href='#' className='text-sm font-light'>
+          <ScrollLink
+            to='sectionAbout'
+            spy={true}
+            smooth={true}
+            duration={800}
+            offset={-100}
+            className='text-sm font-light hover:cursor-pointer hover:opacity-75 transition-color duration-300'
+          >
             01. About
-          </Link>
+          </ScrollLink>
         </NavbarItem>
         <NavbarItem>
-          <Link color='foreground' href='#' className='text-sm font-light'>
+          <ScrollLink
+            to='sectionExperiences'
+            spy={true}
+            smooth={true}
+            duration={800}
+            offset={-100}
+            className='text-sm font-light hover:cursor-pointer hover:opacity-75 transition-color duration-300'
+          >
             02. Experience
-          </Link>
+          </ScrollLink>
         </NavbarItem>
         <NavbarItem>
-          <Link color='foreground' href='#' className='text-sm font-light'>
-            03. Techs
-          </Link>
+          <ScrollLink
+            to='sectionProjects'
+            spy={true}
+            smooth={true}
+            duration={800}
+            offset={-100}
+            className='text-sm font-light hover:cursor-pointer hover:opacity-75 transition-color duration-300'
+          >
+            03. Projects
+          </ScrollLink>
         </NavbarItem>
         <NavbarItem>
-          <Link color='foreground' href='#' className='text-sm font-light'>
-            04. Work
-          </Link>
+          <ScrollLink
+            to='sectionStudies'
+            spy={true}
+            smooth={true}
+            duration={800}
+            offset={-100}
+            className='text-sm font-light hover:cursor-pointer hover:opacity-75 transition-color duration-300'
+          >
+            04. Studies
+          </ScrollLink>
         </NavbarItem>
         <NavbarItem>
-          <Link color='foreground' href='#' className='text-sm font-light'>
-            05. Contact
-          </Link>
+          <ScrollLink
+            to='sectionLanguages'
+            spy={true}
+            smooth={true}
+            duration={800}
+            className='text-sm font-light hover:cursor-pointer hover:opacity-75 transition-color duration-300'
+          >
+            05. Languages
+          </ScrollLink>
         </NavbarItem>
         <NavbarItem>
           <Button
             as={Link}
-            href='#'
+            href='/SalvadorFrontend.pdf'
+            isExternal
             variant='bordered'
             radius='sm'
             className='bg-gradient-to-tr from-pink-500 to-blue-500 text-white shadow-lg font-medium'

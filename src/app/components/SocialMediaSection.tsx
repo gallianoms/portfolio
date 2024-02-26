@@ -34,7 +34,7 @@ const SocialMediaSection = () => {
   ]
 
   return (
-    <section className='grid grid-cols-2 lg:grid-cols-4 gap-4 mx-4 lg:mx-0 mt-10 lg:mt-0 '>
+    <section className='grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-9'>
       {socialMediaData.map((socialMedia, idx) => (
         <div className='w-44 h-44 p-4 border rounded-3xl shadow-sm' key={idx}>
           <Avatar radius='sm' src={socialMedia.avatarSrc} className='' />

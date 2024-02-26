@@ -1,23 +1,23 @@
 import React, { useCallback, useEffect } from 'react'
-import { Avatar, Button, Image } from '@nextui-org/react'
+import { Avatar, Button, Image, Link, Tooltip } from '@nextui-org/react'
 import useEmblaCarousel from 'embla-carousel-react'
-import { ArrowLongRight } from '../../icons/ArrowLongRight'
-import { ArrowLongLeft } from '../../icons/ArrowLongLeft'
-import { ImageData } from '@/app/types/ImageData'
+import { CarouselData } from '@/app/types/CarouselData'
 import { ArrowUpRight } from '@/app/icons/ArrowUpRight'
+import ModalRequirementsProject from './ModalRequirementsProject'
+import { ChevronRightIcon } from '@/app/icons/ChevronRightIcon'
+import { ChevronLeftIcon } from '@/app/icons/ChevronLeftIcon'
+import NextImage from 'next/image'
 
 type CarouselProps = {
-  images: ImageData[]
+  carouselData: CarouselData
 }
 
-const Carousel = ({ images }: CarouselProps) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+const Carousel = ({ carouselData }: CarouselProps) => {
+  const images = carouselData.images
+  const { githubUrl, requirements, techs, websiteUrl } =
+    carouselData.projectData
 
-  useEffect(() => {
-    if (emblaApi) {
-      console.log(emblaApi.slideNodes()) // Acceder a la API si es necesario
-    }
-  }, [emblaApi])
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -28,13 +28,23 @@ const Carousel = ({ images }: CarouselProps) => {
   }, [emblaApi])
 
   return (
-    <div className='w-[360px] max-h-60 relative'>
+    <div className='relative mx-4 lg:mx-0'>
       <div className='embla' ref={emblaRef}>
         <div className='embla__container'>
-          {images.map((image, index) => (
-            <div className='embla__slide' key={index}>
-              {/* eslint-disable-next-line jsx-a11y/alt-text */}
-              <Image as={image.component} {...image.props} />
+          {images.map((carousel, index) => (
+            <div
+              className='embla__slide relative block w-[372px] h-[270px]'
+              key={index}
+            >
+              <NextImage
+                src={carousel.src}
+                // width={carousel.width}
+                // height={carousel.height}
+                fill
+                sizes='372px'
+                alt={carousel.alt}
+                className='w-auto h-auto object-cover object-top rounded-lg '
+              />
             </div>
           ))}
         </div>
@@ -42,35 +52,46 @@ const Carousel = ({ images }: CarouselProps) => {
       <Button
         size='sm'
         isIconOnly
-        className='embla__prev absolute top-1/2 transform -translate-y-1/2 left-0 bg-transparent border-none cursor-pointer ml-2 bg-gray-200 text-gray-800 rounded-md'
+        className='embla__prev absolute top-1/2 transform -translate-y-1/2 left-0 bg-transparent border-none cursor-pointer ml-2 bg-gray-200 text-gray-800 opacity-95 rounded-full'
         onClick={scrollPrev}
       >
-        <ArrowLongLeft />
+        <ChevronLeftIcon className='w-5 h-5' />
       </Button>
       <Button
         size='sm'
         isIconOnly
-        className='embla__next absolute top-1/2 transform -translate-y-1/2 right-0 bg-transparent border-none cursor-pointer mr-2 bg-gray-200 text-gray-800 rounded-md'
+        className='embla__next absolute top-1/2 transform -translate-y-1/2 right-0 bg-transparent border-none cursor-pointer mr-2 bg-gray-200 text-gray-600 rounded-full'
         onClick={scrollNext}
       >
-        <ArrowLongRight />
+        <ChevronRightIcon className='w-6 h-6' />
       </Button>
       <div className='absolute top-0 right-0 mt-2 mr-2'>
         <div className='flex items-center'>
-          <Button
-            size='sm'
-            isIconOnly
-            className='rounded-full bg-[#BEBAB4] text-white'
-          >
-            <Avatar src='/github2.png' className='w-full h-full bg-gray-50' />
-          </Button>
-          <Button
-            size='sm'
-            isIconOnly
-            className='ml-2 rounded-full bg-[#BEBAB4] text-white'
-          >
-            <ArrowUpRight className='w-4 h-4' />
-          </Button>
+          <Tooltip placement='bottom-start' content='View on GitHub'>
+            <Button
+              as={Link}
+              isExternal
+              href={githubUrl}
+              size='sm'
+              isIconOnly
+              className=' rounded-full bg-[#BEBAB4] text-white'
+            >
+              <Avatar src='/github2.png' className='w-full h-full bg-gray-50' />
+            </Button>
+          </Tooltip>
+          <ModalRequirementsProject requirements={requirements} techs={techs} />
+          <Tooltip placement='bottom-start' content='Open Project'>
+            <Button
+              as={Link}
+              isExternal
+              href={websiteUrl}
+              size='sm'
+              isIconOnly
+              className='ml-2 rounded-full bg-[#BEBAB4] text-white'
+            >
+              <ArrowUpRight className='w-4 h-4' />
+            </Button>
+          </Tooltip>
         </div>
       </div>
     </div>
